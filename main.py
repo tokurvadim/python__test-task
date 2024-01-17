@@ -46,7 +46,7 @@ class Route(RouteInterface):
 
     def send(self, uri: str, method: str = 'GET') -> None:
         params = self.get_parameters()
-        url = 'http://core.webstktw.beget.tech/api/v0/apps/' + self.APP_ID + '/' + uri
+        url = 'http://core.webstktw.beget.tech/api/v0/apps/' + self.APP_ID + uri
         request = requests.request(method=method, url=url, json=params)
         response = request.text
         self.set_response(response)
