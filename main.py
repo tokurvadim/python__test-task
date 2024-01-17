@@ -9,15 +9,15 @@ class RouteInterface(ABC):
         pass
 
     @abstractmethod
-    def get_parameters(self) -> list:
+    def get_parameters(self) -> dict:
         pass
 
     @abstractmethod
-    def set_response(self, data: list) -> list:
+    def set_response(self, data: list) -> dict:
         pass
 
     @abstractmethod
-    def get_response(self) -> list:
+    def get_response(self) -> dict:
         pass
 
     @abstractmethod
